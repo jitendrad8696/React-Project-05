@@ -7,7 +7,7 @@ function Card({ eachTodo }) {
   const [editLabel, setEditLabel] = useState("EDIT");
   const [isDone, setIsDone] = useState(eachTodo.isComplete);
 
-  const { editTodo, deleteTodo } = useTodoContext();
+  const { editTodo, deleteTodo, completeTodo } = useTodoContext();
   const edit = () => {
     if (isEditEnable) {
       setIsEditEnable(false);
@@ -26,13 +26,14 @@ function Card({ eachTodo }) {
         disabled={isDone}
         onChange={() => {
           setIsDone(true);
+          completeTodo(eachTodo.id);
         }}
       />
       <input
         className="card-input"
         type="text"
         value={todo}
-        disabled={isEditEnable}
+        disabled={isEditEnable || isDone === true}
         onChange={(e) => setTodo(e.target.value)}
       />
       <button className="card-button" onClick={edit}>
