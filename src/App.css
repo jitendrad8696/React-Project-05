@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: teal;
+}
+
+input {
+  height: 7vh;
+  width: 50vw;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  margin-left: 25vw;
+}
+
+button {
+  height: 7vh;
+  width: 30vw;
+  margin-left: 35vw;
+}
+
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-input {
+  margin: 2vh 0px 2vh 0px;
+  border-width: 0px;
+  text-align: center;
+}
+.card-checkbox {
+  margin: 2vh 0px 2vh 0px;
+  border-width: 0px;
+  width: 5vw;
+}
+
+.card-button {
+  margin: 0px;
+  width: 20vw;
+}
