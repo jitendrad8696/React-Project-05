@@ -24,6 +24,7 @@ function Card({ eachTodo }) {
         className="card-checkbox"
         type="checkbox"
         disabled={isDone}
+        checked={isDone}
         onChange={() => {
           setIsDone(true);
           completeTodo(eachTodo.id);
